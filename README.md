@@ -1,1 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ghFhx2gX)
+Due February 10th, 2025
+
+This program will be a catalog of PlayStation 4 games with the cutoff being December 2024. It will include attributes such as the title, publisher, developer, genre, release date (month, day, year). Users will be able to browse the list and add or delete from it.
