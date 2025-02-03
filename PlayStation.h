@@ -11,19 +11,50 @@ private:
 	string genre;
 	string devName;
 	string publisherName;
-	int releaseDay;
 	int releaseMonth;
+	int releaseDay;
+	int releaseYear;
+
 public:
 	//constructors and destructors
 	PlayStationGame();
 	PlayStationGame(string title);
 	PlayStationGame(int listArray[]);
+	~PlayStationGame();
 
-	//setters and getters
-	getTitle(const  )
+	//getters
+	string getTitle();
+	string getGenre();
+	string getDeveloper();
+	string getPublisher();
+	//Need to figure out how to get all three integers (releaseDay, releaseMonth, releaseYear) 
+	// into this function since I want it to output month/day/year
+	int getReleaseDate();
 
+	//setters
+	void setGenre();
+	void setDeveloper();
+	void setPublisher();
+	void setReleaseDate();
 
 };
+
+PlayStationGame::PlayStationGame() {
+	title = "No title";
+	genre = "No genre";
+	devName = "No developer";
+	publisherName = "No publisher";
+	releaseMonth = 01;
+	releaseDay = 01;
+	releaseYear = 2013;
+}
+
+string PlayStationGame::getTitle() {
+	return title;
+}
+
+
+
 
 
 
@@ -42,3 +73,5 @@ public:
 
 
 #endif
+
+ 
