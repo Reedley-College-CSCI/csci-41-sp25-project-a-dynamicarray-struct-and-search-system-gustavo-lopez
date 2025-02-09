@@ -2,6 +2,7 @@
 #define PLAYSTATION_H
 #include <iostream>
 #include <string>
+#include <fstream>
  
 using namespace std;
 
@@ -19,22 +20,27 @@ struct GameAttributes {
 
 class PlayStation {
 private:
-	GameAttributes currListOfGames();
 	int gameArraySize;
 	int gameArrayCapacity;
 	//Reference 1.29-1.31 notes
 	void updateArraySize();
 
 public:
+	GameAttributes* currListOfGames;
+	//int for array size
+	int arraySize;
 	//constructors and destructors
 	PlayStation();
+	PlayStation(int arraySize);
 	~PlayStation();
 
+	void displayMainMenu() {}
+
 	//getters and setters
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	void readInGameInfo(const string& extFileName);
-	void getGameInfo();
-	void setGameInfo();
-	void removeGameInfo();
+	void addGameInfo();
+	void removeGameInfo(const string& gameTitle);
 
 	//functions to manipulate data. I would like for the user to be able to be able to organize games
 	//alphabetically or by release date.
