@@ -2,60 +2,48 @@
 #define PLAYSTATION_H
 #include <iostream>
 #include <string>
+ 
 using namespace std;
 
-
-class PlayStationGame {
-private:
-	string title;
+//Reference 2.1 notes
+struct GameAttributes {
+	//write in variables
+	string gameTitle;
 	string genre;
 	string devName;
 	string publisherName;
-	int releaseMonth;
-	int releaseDay;
-	int releaseYear;
-
-public:
-	//constructors and destructors
-	PlayStationGame();
-	PlayStationGame(string title);
-	PlayStationGame(int listArray[]);
-	~PlayStationGame();
-
-	//getters
-	string getTitle();
-	string getGenre();
-	string getDeveloper();
-	string getPublisher();
-	//Need to figure out how to get all three integers (releaseDay, releaseMonth, releaseYear) 
-	// into this function since I want it to output month/day/year
-	int getReleaseDate();
-
-	//setters
-	void setGenre();
-	void setDeveloper();
-	void setPublisher();
-	void setReleaseDate();
+	int releaseDate;
 
 };
 
-PlayStationGame::PlayStationGame() {
-	title = "No title";
-	genre = "No genre";
-	devName = "No developer";
-	publisherName = "No publisher";
-	releaseMonth = 01;
-	releaseDay = 01;
-	releaseYear = 2013;
-}
 
-string PlayStationGame::getTitle() {
-	return title;
-}
+class PlayStation {
+private:
+	GameAttributes currListOfGames();
+	int gameArraySize;
+	int gameArrayCapacity;
+	//Reference 1.29-1.31 notes
+	void updateArraySize();
 
+public:
+	//constructors and destructors
+	PlayStation();
+	~PlayStation();
 
+	//getters and setters
+	void readInGameInfo(const string& extFileName);
+	void getGameInfo();
+	void setGameInfo();
+	void removeGameInfo();
 
+	//functions to manipulate data. I would like for the user to be able to be able to organize games
+	//alphabetically or by release date.
+	void displayAlphabetically() const;
+	void displayGames() const;
+	GameAttributes* findGame(const string& gameTitle) const;
+	
 
+};
 
 
 
