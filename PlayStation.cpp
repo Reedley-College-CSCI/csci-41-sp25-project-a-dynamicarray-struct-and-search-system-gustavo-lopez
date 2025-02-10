@@ -7,6 +7,7 @@ PlayStation::PlayStation() {
 	cout << "Default constructor called" << endl;
 	//concrete array size, need to make it dynamic to be able to change the size of the array.
 	arraySize = 100;
+	currentGamesInArray = 0;
 	currListOfGames = new GameAttributes[arraySize];
 }
 
@@ -37,10 +38,15 @@ void PlayStation::readInGameInfo(const string& extFileName) {
 	ifstream inFile(extFileName);
 	string line;
 	int index = 0;
+	int numGamesImported = 0;
 
 
 	if (inFile.is_open()) {
 		while (getline(inFile, line) && index < arraySize) {
+			//line of code to skip over lines that are empty in the text file.
+			if (line.empty()) {
+				continue;
+			}
 			int commaPosition = 0;
 
 			commaPosition = line.find(',');
@@ -55,29 +61,52 @@ void PlayStation::readInGameInfo(const string& extFileName) {
 			currListOfGames[index].devName = line.substr(0, commaPosition);
 			line = line.substr(commaPosition + 1);
 
+			commaPosition = line.find(',');
+			currListOfGames[index].publisherName = line.substr(0, commaPosition);
+			line = line.substr(commaPosition + 1);
+
 			currListOfGames[index].releaseDate = line;
 
 			index++;
+			numGamesImported++;
 
 			
 		}
 		inFile.close();
+		currentGamesInArray = numGamesImported;
 
 		cout << "Game info has been read in and the file has been closed." << endl;
 	}
 	else {
 		cout << "Unable to open file" << endl;
 	}
-
-	
 }
 
+//This function only displays the games as they are in the file
 void PlayStation::displayGames() const{
-	//fill in displayGames function. This function only displays the games as they are in the file
-	cout << "displayGames function has been called" << endl;
+	cout << "Displaying current game catalog:" << endl;
 
-
+	for (int i = 0; i < currentGamesInArray; i++) {
+		cout << "Title: " << currListOfGames[i].gameTitle << endl;
+		cout << "Genre: " << currListOfGames[i].genre << endl;
+		cout << "Developer: " << currListOfGames[i].devName << endl;
+		cout << "Publisher: " << currListOfGames[i].publisherName << endl;
+		cout << "Release Date: " << currListOfGames[i].releaseDate << endl;
+		cout << "----------------------------------------" << endl;
+	}
 }
+
+//function called when user inputs a game title they're looking for in my catalog
+GameAttributes* PlayStation::findGame(const string& userGameTitle) const {
+	for (int i = 0; i < currentGamesInArray; i++) {
+		if (currListOfGames[i].gameTitle == userGameTitle) {
+			return &currListOfGames[i];
+		}
+	}
+	return nullptr;
+}
+
+
 
 //function to sort games A-Z. Use binary search since the array is fairly large.
 void PlayStation::displayGamesAlphabetically() const {
