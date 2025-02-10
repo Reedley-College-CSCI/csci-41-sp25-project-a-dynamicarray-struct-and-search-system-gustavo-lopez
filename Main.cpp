@@ -13,6 +13,7 @@ int main() {
 	PlayStation* object1 = new PlayStation(100);
 	int mainMenuChoice;
 	string gameToFind;
+	GameAttributes* foundGame = nullptr;
 
 	//line to read in text files
 	object1->readInGameInfo("PlaystationGames.txt");
@@ -20,15 +21,28 @@ int main() {
 
 	do {
 		cin >> mainMenuChoice;
+		while (cin.get() != '\n');
 
 		switch (mainMenuChoice) {
 			case 1:
 				object1->displayGames();
 				break;
-			case 2:
-				cout << "Enter game you want to find: ";
-				cin >> gameToFind;
-				//object1.findGame(gameToFind);
+			case 2: 
+				cout << "Enter name of the game you want to find: ";
+				getline(cin, gameToFind);
+				foundGame = object1->findGame(gameToFind);
+
+				// Check if the game was found
+				if (foundGame) {
+					cout << "Game found: " << foundGame->gameTitle << endl;
+					cout << "Genre: " << foundGame->genre << endl;
+					cout << "Developer: " << foundGame->devName << endl;
+					cout << "Publisher: " << foundGame->publisherName << endl;
+					cout << "Release Date: " << foundGame->releaseDate << endl;
+				}
+				else {
+					cout << "Game not found." << endl;
+				}
 				break;
 			case 3:
 				cout << "Exiting program" << endl;
@@ -36,6 +50,7 @@ int main() {
 			default:
 				cout << "Invalid choice. Please try again." << endl;
 		}
+		object1->displayMainMenu();
 	} while (mainMenuChoice != 3);
 
 	delete object1;
