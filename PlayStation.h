@@ -21,7 +21,7 @@ class PlayStation {
 		GameAttributes* currListOfGames;
 		int currentGamesInArray;
 		//Reference 1.29-1.31 notes
-		void updateArraySize();
+		//void updateArraySize();
 		int arraySize;
 
 	public:
@@ -32,17 +32,15 @@ class PlayStation {
 
 		void displayMainMenu();
 		void readInGameInfo(const string& extFileName);
+		void displayGames() const;
+		GameAttributes* findGame(const string& userGameTitle) const;
+
 		//TO DO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		void addGameInfo();
 		void removeGameInfo(const string& gameTitle);
-
-		//functions to manipulate data. I would like for the user to be able to be able to organize games
-		//alphabetically or by release date.
 		void displayGamesByReleaseDate() const;
 		void displayGamesAlphabetically() const;
-		void displayGames() const;
-		GameAttributes* findGame(const string& userGameTitle) const;
-	
+		void displaySubMenu(PlayStation* psObject, int& menuChoice);
 
 };
 
