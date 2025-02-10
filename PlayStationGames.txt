@@ -1,0 +1,53 @@
+Title,Genre,Developer,Publisher,Release Date
+Aaero,Shooter,Mad Fellows Games,Reverb Triple XP,01/10/2018
+Aaru's Awakening,Platform,Lumenox Games,Lumenox Games,04/07/2015
+Babylon's Fall,Action Adventure,PlatinumGames,Square Enix,03/03/2022
+Backbone,Adventure,EggNut,Raw Fury,06/08/2021
+Cafeteria Nipponica,Simulation,Kairosoft,Kairosoft,10/01/2020
+Cake Bash,Party-Beat 'em up,High Tea Frog,Coatsink,10/15/2020
+Daggerhood,Action Platform,Woblyware,Ratalaika Games,08/14/2020
+Daisenryaku: Dai Toua Kouboushi 3,War Simulation,SystemSoft Alpha,SystemSoft Alpha,12/17/2015
+Earth Atlantis,Shoot 'Em Up,Pixel Perfex,Headup Games,06/05/2018
+Earth Defense Force 4.1,Third-person shooter,Sandlot,D3 Publisher,12/08/2015
+F1 2015,Racing,Codemasters,Codemasters,07/30/2015
+F1 2016,Racing,Codemasters,Codemasters,08/19/2016
+Gal Gun: Double Peace,Rail Shooter,Inti Creates,Alchemist,08/02/2016
+Gal Gun 2,Rail Shooter,Inti Creates,Inti Creates,04/24/2018
+Hammerwatch,Hack and Slash,Crackshell,BlitWorks,12/19/2017
+Hand of Fate,Action Role-Playing,Defiant Development,Defiant Development,02/17/2015
+I AI,Shoot 'Em Up,Satur Entertainment,Sometimes You,12/09/2020
+I Am Bread,Puzzle,Bossa Studios,Bossa Studios,08/25/2015
+Jack Move,Role Playing,So Romantic,Hype Train Digital,09/20/2022
+Jackbox Party Pack,Party-Trivia,Jackbox Games,Jackbox Games,11/18/2014
+Kandagawa Jet Girls,Racing,Honey Parade Games,JP Marvelous,08/18/2020
+Kamiko,Action,Skipmore,Flyhigh Works,06/27/2019
+Labyrinth Life,Role-playing,Matrix Software,D3 Publisher,08/01/2019
+Labyrinth of Galleria: The Moon Society,Role-Playing,Nippon Ichi Software,Nippon Ichi Software,02/14/2023
+Machinarium,Graphic Adventure,Amanita Design,Amanita Design,09/01/2016
+Mad Games Tycoon,Business Simulation,Eggcode,Toplitz Productions,11/14/2019
+N++,Platform,Metanet Software,Metanet Software,07/29/2015
+Namco Museum Archives Vol. 1,Arcade,B.B. Studio,Bandai Namco Entertainment,06/18/2020
+Obduction,Adventure Puzzle,Cyan Worlds,Cyan Worlds,08/29/2017
+Obliteracers,Vehicular Combat,Space Dust Studios,Space Dust Studios,07/20/2016	Unreleased
+Pacer,Racing,R8 Games,R8 Games,10/29/2020
+Pac-Man 256,Arcade,Hipster Whale,Bandai Namco Entertainment,06/21/2016
+Q*bert Rebooted,Platform Puzzle,Loot Interactive,Loot Interactive,02/17/2015
+Quantum Replica,Stealth Action,ON3D Studios,PQube,05/13/2021
+R-Type Dimensions EX,Shoot 'Em up,Irem,Tozai Games,12/19/2018
+R-Type Final 2,Shoot 'Em up,Granzella,JP NIS America,04/29/2021
+Sackboy: A Big Adventure,Platform Puzzle,Sumo Digital,Sony Interactive Entertainment,10/12/2020
+SaGa: Scarlet Grace - Ambitions,Role-playing,Square Enix,Square Enix,08/02/2018
+The Silver Case,Visual Novel,Grasshopper Manufacture,NIS America,03/15/2018
+The Sims 4,Simulation,Maxis,Electronic Arts,11/17/2017
+Ultimate Chicken Horse,Platform,Clever Endeavour,Clever Endeavour,12/12/2017
+Ultimate Fishing Simulator,Fishing Simulation,Bit Golem Console Labs,PlayWay,12/18/2020
+Valentino Rossi: The Game,Racing,Milestone SRL,	Milestone SRL,09/21/2016
+Valfaris,Action Platform,Steel Mantis,JP: Digital Uppercut,11/05/2019
+Walking Dead: Michonne,Graphic Adventure,Telltale Games,Telltale Games,02/23/2016
+Walking Dead: Season One,Graphic Adventure,Telltale Games,Telltale Games,09/12/2014
+XCOM 2,Turn-Based Tactics,Firaxis Games,Take-Two Interactive,09/27/2016
+Xeno Crisis,Top-Down Shooter,Bitmap Bureau,Bitmap Bureau,09/17/2020
+Yaga,Action Role-Playing,Breadcrumbs Interactive,Versus Evil,11/12/2019
+Yakuza 0,Action Adventure,Ryu Ga Gotoku Studio,Sega,03/12/2015
+Zanki Zero: Last Beginning,Role-Playing,Spike Chunsoft,Spike Chunsoft,04/09/2019
+Zenith,Role-Playing,Infinigon Games,BadLand Indie,07/03/2017
