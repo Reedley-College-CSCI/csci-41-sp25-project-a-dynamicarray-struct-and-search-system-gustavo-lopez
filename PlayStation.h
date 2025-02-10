@@ -8,64 +8,42 @@ using namespace std;
 
 //Reference 2.1 notes
 struct GameAttributes {
-	//write in variables
 	string gameTitle;
 	string genre;
 	string devName;
 	string publisherName;
-	int releaseDate;
+	string releaseDate;
 
 };
 
-
 class PlayStation {
-private:
-	int gameArraySize;
-	int gameArrayCapacity;
-	//Reference 1.29-1.31 notes
-	void updateArraySize();
+	private:
+		GameAttributes* currListOfGames;
+		int currentGamesInArray;
+		//Reference 1.29-1.31 notes
+		void updateArraySize();
+		int arraySize;
 
-public:
-	GameAttributes* currListOfGames;
-	//int for array size
-	int arraySize;
-	//constructors and destructors
-	PlayStation();
-	PlayStation(int arraySize);
-	~PlayStation();
+	public:
+		//constructors and destructors
+		PlayStation();
+		PlayStation(int size);
+		~PlayStation();
 
-	void displayMainMenu() {}
+		void displayMainMenu();
+		void readInGameInfo(const string& extFileName);
+		//TO DO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		void addGameInfo();
+		void removeGameInfo(const string& gameTitle);
 
-	//getters and setters
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	void readInGameInfo(const string& extFileName);
-	void addGameInfo();
-	void removeGameInfo(const string& gameTitle);
-
-	//functions to manipulate data. I would like for the user to be able to be able to organize games
-	//alphabetically or by release date.
-	void displayAlphabetically() const;
-	void displayGames() const;
-	GameAttributes* findGame(const string& gameTitle) const;
+		//functions to manipulate data. I would like for the user to be able to be able to organize games
+		//alphabetically or by release date.
+		void displayGamesByReleaseDate() const;
+		void displayGamesAlphabetically() const;
+		void displayGames() const;
+		GameAttributes* findGame(const string& userGameTitle) const;
 	
 
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif
-
- 
